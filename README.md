@@ -3,7 +3,7 @@
 
 ## Class Features
 
-- Pay with vogupay!
+- Pay with voguepay!
 - Access comand api to create user, pay, fetch e.t.c
 - Add auto generated items 
 - Light weight
@@ -29,12 +29,12 @@ software availability and distribution.
 
     Drop the provided files into the CodeIgniter project
     Configure your vougepay details inside the application/config/vgniter.php file. refer to http://voguepay.com/developer
-    Modify the controller example supplied (application/controller/hauth.php) to fit your needs
+    Modify the controller example supplied (application/controller/vgniter.php) to fit your needs
 
 	
 ## A Simple Example
 
-  TO use Vgniter load the library in your controller
+  To use Vgniter load the library in your controller
 ```php
   $this->load->library('Vgniter_lib');
 ```
@@ -56,6 +56,7 @@ software availability and distribution.
   //$voguepay_add_item( $form, name of item ,  description for the item, price of the item);
   $form = $this->vgniter_lib->$voguepay_add_item( &$form, 'Face Cap',  'beautiful facecap for use', 1000);
 ```
+
 
 		View sample controller code below
 ```php
