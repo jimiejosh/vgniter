@@ -47,14 +47,15 @@ software availability and distribution.
 ``` 
 	To add items simply use
 ```php
-  //$voguepay_add_item( $form, name of item ,  description for the item, price of the item);
+  //voguepay_add_item( $form, name of item ,  description for the item, price of the item);
   $form = $this->vgniter_lib->$voguepay_add_item( &$form, 'Face Cap',  'beautiful facecap for use', 1000);
 ```
 	Dont forget to close the form variable
 	// fuction apends item total, submit button, and closes form
 ```php
-  //$voguepay_add_item( $form, name of item ,  description for the item, price of the item);
-  $form = $this->vgniter_lib->$voguepay_add_item( &$form, 'Face Cap',  'beautiful facecap for use', 1000);
+  //vogniter_close( &$form , image, 'make_payment' , butcolor )
+  $outputform = vogniter_close( &$form , true,  'make_payment' , 'blue');
+  echo $outputform;
 ```
 
 
@@ -86,6 +87,8 @@ class Vgniter extends CI_Controller {
 	
 		echo $finalform;
 	}
+	
+}	
 	
 ```
 
