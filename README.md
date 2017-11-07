@@ -43,18 +43,18 @@ software availability and distribution.
    Initiate the library with
 ```php
   //voguepay_start( memo , currency, store_id, recurrent, interval, demo);
-  $form = $this->vgniter_lib->voguepay_start(1000,'','','','','','demo');
+  $this->vgniter_lib->voguepay_start("BARGAINPROTECT Escrow Payment",'','','','','');
 ``` 
 	To add items simply use
 ```php
   //voguepay_add_item( $form, name of item ,  description for the item, price of the item);
-  $form = $this->vgniter_lib->$voguepay_add_item( &$form, 'Face Cap',  'beautiful facecap for use', 1000);
+  $form = $this->vgniter_lib->voguepay_add_item( $title, $description, $amount);
 ```
 	Dont forget to close the form variable
 	// fuction apends item total, submit button, and closes form
 ```php
   //vogniter_close( &$form , image, 'make_payment' , butcolor )
-  $outputform = vogniter_close( &$form , true,  'make_payment' , 'blue');
+  $outputform = $this->vgniter_lib->vogniter_close( true,  'make_payment' , 'blue');
   echo $outputform;
 ```
 
@@ -77,13 +77,13 @@ class Vgniter extends CI_Controller {
 
 	// create form with default values set in config i.e merchant_ref, merchant_id, e.t.c
 	// and also add <form method='POST' action='https://voguepay.com/pay/'>
-	$form = $this->vgniter_lib->voguepay_start(1000,'','','','','','demo');
+	$this->vgniter_lib->voguepay_start("Secure Payment by Voguepay",'','','','','');
 	
 	// function to add item you want to sell to form including item name, item descriptio
 	// and item price, it will automatically generate total for all items
-	$form = $this->vgniter_lib->voguepay_add_item( &$form, 'Face Cap',  'beautiful facecap for use', 1000);
-	$form = $this->vgniter_lib->voguepay_add_item( &$form, 'Laban T-shirt', $desc = 'Labeled T-shirts', 4500);
-	$finalform = $this->vgniter_lib->vogniter_close( $form , true, 'make_payment' ,  'blue');
+	$this->vgniter_lib->voguepay_add_item( 'Face Cap',  'beautiful facecap for use', 1000 );
+	$this->vgniter_lib->voguepay_add_item(  'Laban T-shirt', $desc = 'Labeled T-shirts', 4500 ); 
+	$finalform = $this->vgniter_lib->vogniter_close( true,  'make_payment' , 'blue');
 	
 		echo $finalform;
 	}
