@@ -29,12 +29,12 @@
 		// To recieve a transaction id on your success or failure URL, you must set Send Transaction ID to Success and Failure Return URL to Yes on your account preferences page.
 
 # Gateway Specific Variables
-	$config['merchant_id'] = 'qa331322179752';
-	$config['merchant_ref'] = '234-567-890';
+	$config['merchant_id'] = 'your-merchant-id'; 
+	$config['merchant_ref'] = 'your-merchant-ref'; //if you have a dafault
 	$config['my_username'] = 'your-username';
-	$config['merchant_email_on_voguepay'] = 'your@email.com';
+	$config['merchant_email_on_voguepay'] = 'joshjimie@gmail.com';
 	$config['testmode'] = 'demo'; //switch between demo and prduction enviroment
-	$config['command_api_token'] = '9ufkS6FJffGplu9t7uq6XPPVQXBpHbaN';
+	$config['command_api_token'] = '';
 	$config['developer_code'] = '';
 	$config['index_page'] = 'index.php';
 	
