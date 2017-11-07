@@ -83,7 +83,7 @@ class Vgniter extends CI_Controller {
 	// function to add item you want to sell to form including item name, item descriptio
 	// and item price, it will automatically generate total for all items
 	$this->vgniter_lib->voguepay_add_item( 'Face Cap',  'beautiful facecap for use', 1000 );
-	$this->vgniter_lib->voguepay_add_item(  'Laban T-shirt', $desc = 'Labeled T-shirts', 4500 ); 
+	$this->vgniter_lib->voguepay_add_item(  'Laban T-shirt', 'Labeled T-shirts', 4500 ); 
 	$finalform = $this->vgniter_lib->vogniter_close( true,  'make_payment' , 'blue');
 	
 		echo $finalform;
