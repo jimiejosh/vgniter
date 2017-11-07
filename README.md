@@ -50,9 +50,10 @@ software availability and distribution.
   //voguepay_add_item( $form, name of item ,  description for the item, price of the item);
   $form = $this->vgniter_lib->voguepay_add_item( $title, $description, $amount);
 ```
+```php
 	Dont forget to close the form variable
 	// fuction apends item total, submit button, and closes form
-```php
+ 
   //vogniter_close( &$form , image, 'make_payment' , butcolor )
   $outputform = $this->vgniter_lib->vogniter_close( true,  'make_payment' , 'blue');
   echo $outputform;
